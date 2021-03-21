@@ -1,0 +1,27 @@
+{
+  "name": "e-commerce-backend",
+  "version": "1.0.0",
+  "description": "Here, I have built the back end for an e-commerce website. I configured a working Express.js API, which uses Sequelize to interact with a MySQL database.  Using the latest technologies, your company can compete with other e-commerce companies.",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justpeachy8688/e-commerce-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justpeachy8688/e-commerce-backend/issues"
+  },
+  "homepage": "https://github.com/justpeachy8688/e-commerce-backend#readme"
+}
