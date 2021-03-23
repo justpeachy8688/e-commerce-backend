@@ -1,6 +1,10 @@
+//REQUIRE THE MODEL AND DATA TYPES FROM SEQUELIZE
 const { Model, DataTypes } = require('sequelize');
+
+//REQUIRE SEQUELIZE
 const sequelize = require('../config/connection');
 
+//CREATE A CATEGORY MODEL
 class Category extends Model {}
 
 Category.init(
@@ -17,8 +21,9 @@ Category.init(
         }
     },
     {
-        //METADATA
+        // METADATA
         sequelize,
+        //DON'T NEED CREATED AT AND DELETED AT COLUMNS
         timestamps: false,
         //table name exactly what is specified
         freezeTableName: true,
@@ -27,4 +32,5 @@ Category.init(
     }
 );
 
+//EXPORT CATEGORY
 module.exports = Category;
