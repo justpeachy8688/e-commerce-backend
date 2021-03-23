@@ -29,7 +29,7 @@ ProductTag.init(
         //table name exactly what is specified
         freezeTableName: true,
         underscored: true,
-        modelName: "category"
+        modelName: "productTag"
     }
 );
 

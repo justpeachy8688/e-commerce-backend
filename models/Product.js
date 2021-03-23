@@ -32,9 +32,13 @@ Product.init(
         },
         category_id: {
             type: DataTypes.INTEGER,
-
-        }
+            references: {
+                model: 'category',
+                key: 'id',
+            },
+        },
     },
+
     {
         //METADATA
         sequelize,
@@ -42,7 +46,7 @@ Product.init(
         //table name exactly what is specified
         freezeTableName: true,
         underscored: true,
-        modelName: "category"
+        modelName: "product"
     }
 );
 
