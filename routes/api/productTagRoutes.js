@@ -6,5 +6,6 @@ const { Category, Product, ProductTag, Tag } = require("../../models");
 
 //BUILD SOME ROUTES
 
+
 //EXPORT THE ROUTER
 module.exports = router;
