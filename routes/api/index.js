@@ -9,7 +9,6 @@ const tagRoutes = require('./tag-routes');
 
 //CONFIGURE THE ROUTES 
 router.use("/category", categoryRoutes);
-// router.use("/productTag", productTagRoutes);
 router.use("/product", productRoutes);
 router.use("/tag", tagRoutes);
 

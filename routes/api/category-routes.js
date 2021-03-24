@@ -1,14 +1,18 @@
 //CREATE A ROUTER FROM EXPRESS
 const router = require('express').Router();
 //IMPORT THE MODELS
-const { Category, Product, ProductTag, Tag } = require("../../models");
+const { Category, Product } = require("../../models");
 
 
 // The `/api/categories` endpoint
 
 router.get('/', async (req, res) => {
     try {
-        const categoryData = await Category.findAll()
+        const categoryData = await Category.findAll(
+            {
+                include: [{ model: Product }]
+            },
+        )
         res.status(200).json(categoryData)
         // res.status(200).send("Is this working?")
     } catch (err) {
