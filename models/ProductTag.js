@@ -26,7 +26,7 @@ ProductTag.init(
         //METADATA
         sequelize,
         timestamps: false,
-        //table name exactly what is specified
+        // TABLE NAME EXACTLY WHAT IS SPECIFIED
         freezeTableName: true,
         underscored: true,
         modelName: "productTag"
