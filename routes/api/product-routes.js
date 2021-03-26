@@ -49,10 +49,12 @@ router.post('/', (req, res) => {
         tagIds: [1, 2, 3, 4]
     }
     */
+    console.log(req.body)
     Product.create(req.body)
         .then((product) => {
             // IF THERES PRODUCT TAGS, WE NEED TO CREATE PAIRINGS TO BULK CREATE IN THE ProductTag MODEL
             if (req.body.tagIds.length) {
+                console.log(req.body)
                 const productTagIdArr = req.body.tagIds.map((tag_id) => {
                     return {
                         product_id: product.id,
@@ -73,6 +75,7 @@ router.post('/', (req, res) => {
 
 // UPDATE PRODUCT
 router.put('/:id', (req, res) => {
+    console.log(req.body)
     // UPDATE PRODUCT DATA
     Product.update(req.body, {
         where: {
@@ -108,7 +111,7 @@ router.put('/:id', (req, res) => {
         })
         .then((updatedProductTags) => res.json(updatedProductTags))
         .catch((err) => {
-            // console.log(err);
+            console.log(err);
             res.status(400).json(err);
         });
 });
